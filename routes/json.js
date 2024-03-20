@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
     try {
         let myText = await getJSON();
         console.log(myText);
-        res.send("JSON data retrieved successfully")
+        res.send("JSON data retrieved successfully:", myText)
     } catch (error) {
         console.log("Error fetching JSON data:", error);
         res.status(500).send("Internal Server Error");
