@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         let myText = await getJSON();
-        console.log(myText);
+        console.log("Text from S3: ", myText);
         /* res.send("JSON data retrieved successfully") */
         res.render('json', { title: 'JSON text saved successfully', myText: myText});
     } catch (error) {
