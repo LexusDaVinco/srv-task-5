@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
         res.send("JSON data retrieved successfully:", myText)
     } catch (error) {
         console.log("Error fetching JSON data:", error);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send("Internal Server Error: ", error);
     }
     // Your GET route logic
     res.render('json', { title: 'JSON text saver' });
