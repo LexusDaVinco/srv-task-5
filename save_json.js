@@ -9,6 +9,7 @@ const saveJSON = async (jsonText) => {
     Bucket: "cyclic-lonely-newt-kilt-eu-north-1",
     Key: "jsonData.json",
   }).promise()
+  console.log("Type of JSON Text" + typeof(jsonText));
 };
 
 module.exports = { saveJSON };
