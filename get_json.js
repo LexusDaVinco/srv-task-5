@@ -5,7 +5,7 @@ const s3 = new AWS.S3()
 
 const getJSON = async ()=> { 
   await s3.getObject({
-  Bucket: "cyclic-lonely-newt-kilt-eu-north-1",
+  Bucket: "defiant-school-uniform-clamCyclicDB",
   Key: "jsonData.json",
 }).promise()
 }
