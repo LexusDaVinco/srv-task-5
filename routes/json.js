@@ -23,7 +23,6 @@ router.get('/', async (req, res) => {
     try {
         let myText = await getJSON();
         console.log("TYPE of Text from S3: ", typeof(myText));
-        /* res.send("JSON data retrieved successfully") */
         res.render('json', { title: 'JSON text fetched successfully', myText: myText});
     } catch (error) {
         console.log("Error fetching JSON data:", error);
